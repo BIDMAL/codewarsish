@@ -1,4 +1,5 @@
 from typing import List
+from collections import Counter
 """
 Given an array nums of size n, return the majority element.
 
@@ -8,7 +9,26 @@ The majority element is the element that appears more than ⌊n / 2⌋ times. Yo
 
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        return 1
+        cntr = Counter(nums)
+        return cntr.most_common(1)[0][0]
+
+    def majorityElementAlternate(self, nums: List[int]) -> int:
+        """
+        Moore's Voting Algorithm
+        """
+        count = 0
+        candidate = 0
+
+        for num in nums:
+            if count == 0:
+                candidate = num
+
+            if num == candidate:
+                count += 1
+            else:
+                count -= 1
+
+        return candidate
 
 
 def test(nums: List[int], output):
