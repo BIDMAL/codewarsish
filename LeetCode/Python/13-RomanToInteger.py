@@ -50,7 +50,7 @@ class Solution:
         return ans
 
 
-def test(input: List[int], output):
+def test(input, output):
     solution = Solution()
     out = solution.romanToInt(input)
     assert out == output

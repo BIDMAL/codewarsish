@@ -26,7 +26,7 @@ class Solution:
         return prefix
 
 
-def test(input: List[int], output):
+def test(input, output):
     solution = Solution()
     out = solution.longestCommonPrefix(input)
     assert out == output

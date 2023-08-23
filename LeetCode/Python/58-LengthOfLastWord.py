@@ -11,7 +11,7 @@ class Solution:
         return len(s.split()[-1])
 
 
-def test(input: List[int], output):
+def test(input, output):
     solution = Solution()
     out = solution.lengthOfLastWord(input)
     assert out == output

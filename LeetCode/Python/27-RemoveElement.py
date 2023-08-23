@@ -20,7 +20,7 @@ class Solution:
         return len(nums)
 
 
-def test(nums: List[int], val: int, output, result):
+def test(nums, val, output, result):
     solution = Solution()
     out = solution.removeElement(nums, val)
     assert out == output

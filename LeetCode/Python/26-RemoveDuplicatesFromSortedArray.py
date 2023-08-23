@@ -22,7 +22,7 @@ class Solution:
         return len(nums)
 
 
-def test(nums: List[int], output, result):
+def test(nums, output, result):
     solution = Solution()
     out = solution.removeDuplicates(nums)
     assert out == output
