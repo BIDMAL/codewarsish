@@ -37,28 +37,28 @@ class Solution:
         return []
 
 
-def test(input1, input2, output):
+def test(*args, expected):
     solution = Solution()
-    out = solution.twoSum(input1, input2)
-    assert out == output
+    output = solution.twoSum(*args)
+    assert output == expected
 
 
 if __name__ == '__main__':
 
     test(
-        input1=[2, 7, 11, 15],
-        input2=9,
-        output=[0, 1]
+        [2, 7, 11, 15],
+        9,
+        expected=[0, 1]
     )
 
     test(
-        input1=[3, 2, 4],
-        input2=6,
-        output=[1, 2]
+        [3, 2, 4],
+        6,
+        expected=[1, 2]
     )
 
     test(
-        input1=[3, 3],
-        input2=6,
-        output=[0, 1]
+        [3, 3],
+        6,
+        expected=[0, 1]
     )
